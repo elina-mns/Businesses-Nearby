@@ -62,7 +62,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageView" destination="8hO-Kn-60w" id="K97-CZ-OH3"/>
+                <outlet property="imageOfBusiness" destination="8hO-Kn-60w" id="dBd-YU-q9r"/>
                 <outlet property="location" destination="3SW-K3-7uM" id="iOd-f8-5E4"/>
                 <outlet property="name" destination="t73-nm-geR" id="HAx-th-Kko"/>
                 <outlet property="phone" destination="oy0-li-U9Q" id="0uh-CG-O3d"/>

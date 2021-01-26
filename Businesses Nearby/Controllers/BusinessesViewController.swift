@@ -27,9 +27,31 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
             fatalError()
         }
-        let business = businesses[indexPath.row]
         return cell
     }
     
     
+}
+
+//MARK: - Extension for UIImageView to process the link in JSON
+
+extension UIImageView {
+    
+    func downloaded(from url: URL, completion: ((UIImage?) -> Void)? = nil) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else {
+                completion?(nil)
+                return
+            }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+                completion?(image)
+            }
+        }.resume()
+    }
 }

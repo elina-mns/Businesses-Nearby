@@ -13,17 +13,20 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageOfBusiness: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    static let identifier = "TableViewCell"
+    static func nib() -> UINib {
+        return UINib(nibName: "TableViewCell",
+                     bundle: nil)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

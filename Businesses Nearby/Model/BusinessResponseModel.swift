@@ -8,15 +8,15 @@
 import Foundation
 
 struct BusinessResponseModel: Codable {
-    let businesses: [Businesses]
+    let businesses: [Business]
 }
 
-struct Businesses: Codable {
+struct Business: Codable {
     let rating: String
     let price: String
     let phone: String
     let isClosed: String
-    let categories: [Categories]
+    let categories: [Category]
     let name: String
     let imageURL: String
     
@@ -24,13 +24,14 @@ struct Businesses: Codable {
         case rating
         case price
         case phone
+        case categories
         case isClosed = "is_Closed"
         case name
         case imageURL = "image_url"
     }
 }
 
-struct Categories: Codable {
+struct Category: Codable {
     let alias: String
     let title: String
 }
