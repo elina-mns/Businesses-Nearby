@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		313D90B825C09DFD00A605FE /* GroceriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313D90B725C09DFD00A605FE /* GroceriesViewController.swift */; };
+		313D90B825C09DFD00A605FE /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313D90B725C09DFD00A605FE /* BusinessesViewController.swift */; };
 		313D90BB25C09E3C00A605FE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313D90BA25C09E3C00A605FE /* InfoViewController.swift */; };
 		316C494325C099FF0084974E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C494225C099FF0084974E /* AppDelegate.swift */; };
 		316C494525C099FF0084974E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C494425C099FF0084974E /* SceneDelegate.swift */; };
-		316C494725C099FF0084974E /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C494625C099FF0084974E /* RestaurantsViewController.swift */; };
 		316C494A25C099FF0084974E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316C494825C099FF0084974E /* Main.storyboard */; };
 		316C494C25C09A010084974E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 316C494B25C09A010084974E /* Assets.xcassets */; };
 		316C494F25C09A010084974E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316C494D25C09A010084974E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		313D90B725C09DFD00A605FE /* GroceriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesViewController.swift; sourceTree = "<group>"; };
+		313D90B725C09DFD00A605FE /* BusinessesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
 		313D90BA25C09E3C00A605FE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		316C493F25C099FF0084974E /* Businesses Nearby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Businesses Nearby.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		316C494225C099FF0084974E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		316C494425C099FF0084974E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		316C494625C099FF0084974E /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
 		316C494925C099FF0084974E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		316C494B25C09A010084974E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		316C494E25C09A010084974E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,8 +72,7 @@
 		316C495725C09C570084974E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				316C494625C099FF0084974E /* RestaurantsViewController.swift */,
-				313D90B725C09DFD00A605FE /* GroceriesViewController.swift */,
+				313D90B725C09DFD00A605FE /* BusinessesViewController.swift */,
 				313D90BA25C09E3C00A605FE /* InfoViewController.swift */,
 			);
 			path = Controllers;
@@ -151,9 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316C494725C099FF0084974E /* RestaurantsViewController.swift in Sources */,
 				316C494325C099FF0084974E /* AppDelegate.swift in Sources */,
-				313D90B825C09DFD00A605FE /* GroceriesViewController.swift in Sources */,
+				313D90B825C09DFD00A605FE /* BusinessesViewController.swift in Sources */,
 				316C494525C099FF0084974E /* SceneDelegate.swift in Sources */,
 				313D90BB25C09E3C00A605FE /* InfoViewController.swift in Sources */,
 			);
