@@ -9,7 +9,7 @@ import UIKit
 
 class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var businesses: [BusinessModel] = []
+    var businesses: [BusinessResponseModel] = []
   
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,12 +28,6 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             fatalError()
         }
         let business = businesses[indexPath.row]
-        cell.name.text = businesses.name
-        cell.rating.text = String(businesses.rating)
-        cell.location.text = businesses.location
-        cell.phone.text = phone.location
-        cell.imageView.text = businesses.imageView
-        cell.delegate = self
         return cell
     }
     
