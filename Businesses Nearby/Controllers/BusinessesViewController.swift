@@ -13,7 +13,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     let activityIndicator = UIActivityIndicatorView(style: .medium)
-    var businesses: [BusinessResponseModel] = []
+    var businesses: [Business] = []
     var locationManager: CLLocationManager?
     
     override func viewDidLoad() {
@@ -38,21 +38,35 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showInfoViewController", sender: self)
+    }
+    
     
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
-                if CLLocationManager.isRangingAvailable() {
-                    //BusinessAPI.requestBusinessInfo(location: UserLocation) { (<#BusinessResponseModel?#>, <#Error?#>) in
-                        
-                    //}
+        if status == .authorizedWhenInUse,
+           CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self),
+           CLLocationManager.isRangingAvailable() {
+            requestBusinessInfo()
+        }
+    }
+        
+    func requestBusinessInfo() {
+        let userLocation = UserLocation(latitude: locationManager?.location?.coordinate.latitude ?? 0,
+                                        longitude: locationManager?.location?.coordinate.longitude ?? 0)
+        BusinessAPI.requestBusinessInfo(location: userLocation) { (response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let responseExpected = response {
+                self.businesses = responseExpected.businesses
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.activityIndicator.stopAnimating()
                 }
             }
         }
     }
-    
-    
 }
 
     //MARK: - Extension for UIImageView to process the link in JSON

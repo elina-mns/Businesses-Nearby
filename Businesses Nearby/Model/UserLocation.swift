@@ -8,6 +8,6 @@
 import Foundation
 
 struct UserLocation: Codable {
-    let latitude: Double?
-    let longitude: Double?
+    let latitude: Double
+    let longitude: Double
 }

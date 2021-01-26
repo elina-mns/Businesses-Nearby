@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" id="0I3-IC-IOl"/>
                     <connections>
                         <outlet property="tableView" destination="edb-l7-Xzj" id="HeY-gt-xeL"/>
-                        <segue destination="UZA-ZP-8j5" kind="show" id="Naw-mE-EGa"/>
+                        <segue destination="UZA-ZP-8j5" kind="show" identifier="showInfoViewController" id="Naw-mE-EGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1j-jr-6zt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -83,6 +83,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="t7F-RN-UKS"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="acm-vv-Oj3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
