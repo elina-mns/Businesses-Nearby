@@ -9,8 +9,19 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var reviewCountLabel: UILabel!
+    @IBOutlet weak var isItOpenLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    @IBAction func makeReservationIsTapped(_ sender: UIButton) {
         
     }
 }

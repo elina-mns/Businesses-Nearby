@@ -20,6 +20,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
@@ -32,7 +33,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else {
             fatalError()
         }
         return cell
@@ -42,7 +43,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         performSegue(withIdentifier: "showInfoViewController", sender: self)
     }
     
-    
+    //MARK: - Location Manager and request info
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse,
