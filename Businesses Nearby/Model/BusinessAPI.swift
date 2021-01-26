@@ -8,6 +8,7 @@
 import Foundation
 
 class BusinessAPI {
+    
     static let apiKey = "anNGTLhlmtoLfR5moDqC6Esv8EAHW4WvBFyFPjMB1qNAk9aixJjYYNNbs2nN8QN5K6SPXVcD5vmQeaiQxqeuJwfBCXCvCvlA6tDlqjD2BkPTkYujI1bg4uDg8X4QYHYx"
     
     enum EndPoints {
@@ -23,7 +24,7 @@ class BusinessAPI {
         }
     }
     
-    class func requestBusinessInfo(completionHandler: @escaping (BusinessResponseModel?, Error?) -> Void) {
+    class func requestBusinessInfo(location: UserLocation, completionHandler: @escaping (BusinessResponseModel?, Error?) -> Void) {
         let task = URLSession.shared.dataTask(with: EndPoints.businessInfo.url, completionHandler: { (data, response, error) in
             guard let data = data else {
                 completionHandler(nil, error)

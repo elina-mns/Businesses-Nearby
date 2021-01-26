@@ -6,18 +6,26 @@
 //
 
 import UIKit
+import CoreLocation
 
-class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
-    var businesses: [BusinessResponseModel] = []
-  
     @IBOutlet weak var tableView: UITableView!
+    
+    let activityIndicator = UIActivityIndicatorView(style: .medium)
+    var businesses: [BusinessResponseModel] = []
+    var locationManager: CLLocationManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
     }
+    
+    //MARK: - Table View Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         businesses.count
@@ -31,9 +39,23 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+                if CLLocationManager.isRangingAvailable() {
+                    //BusinessAPI.requestBusinessInfo(location: UserLocation) { (<#BusinessResponseModel?#>, <#Error?#>) in
+                        
+                    //}
+                }
+            }
+        }
+    }
+    
+    
 }
 
-//MARK: - Extension for UIImageView to process the link in JSON
+    //MARK: - Extension for UIImageView to process the link in JSON
 
 extension UIImageView {
     
