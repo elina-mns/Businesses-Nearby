@@ -12,11 +12,12 @@ struct BusinessResponseModel: Codable {
 }
 
 struct Business: Codable {
-    let rating: String
+    let rating: Double
     let price: String
     let phone: String
-    let isClosed: String
+    let isClosed: Bool
     let categories: [Category]
+    let reviewCount: Int
     let name: String
     let imageURL: String
     
@@ -25,7 +26,8 @@ struct Business: Codable {
         case price
         case phone
         case categories
-        case isClosed = "is_Closed"
+        case reviewCount = "review_count"
+        case isClosed = "is_closed"
         case name
         case imageURL = "image_url"
     }

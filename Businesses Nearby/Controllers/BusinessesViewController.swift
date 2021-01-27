@@ -24,6 +24,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
+        checkAndRequestInfo()
     }
     
     //MARK: - Table View Methods
@@ -46,10 +47,16 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - Location Manager and request info
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse,
+        checkAndRequestInfo()
+    }
+    
+    private func checkAndRequestInfo() {
+        if locationManager?.authorizationStatus == .authorizedWhenInUse,
            CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self),
            CLLocationManager.isRangingAvailable() {
             requestBusinessInfo()
+        } else {
+            locationManager?.requestWhenInUseAuthorization()
         }
     }
         

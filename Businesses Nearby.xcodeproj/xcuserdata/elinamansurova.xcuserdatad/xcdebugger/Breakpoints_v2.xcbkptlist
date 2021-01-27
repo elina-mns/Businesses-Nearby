@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6AA6349F-105C-40AD-9A1E-D29CF6E99F3F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D68BA636-D340-4CC2-A435-595071BF47A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "requestBusinessInfo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D68BA636-D340-4CC2-A435-595071BF47A5 - bb277eb590c53b8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Businesses_Nearby.BusinessesViewController.requestBusinessInfo() -&gt; ()"
+                  moduleName = "Businesses Nearby"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "797">
+               </Location>
+               <Location
+                  uuid = "D68BA636-D340-4CC2-A435-595071BF47A5 - d4808dc9609302be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Businesses_Nearby.BusinessResponseModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Businesses_Nearby.BusinessesViewController.requestBusinessInfo() -&gt; ()"
+                  moduleName = "Businesses Nearby"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73FB0408-1158-434A-A9B9-B3D9EE026741"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "checkAndRequestInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28D9F035-68CD-446E-87EE-532307178A49"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Businesses Nearby/Model/BusinessAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "requestBusinessInfo(location:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

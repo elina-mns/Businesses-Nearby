@@ -34,8 +34,12 @@ class BusinessAPI {
                 return
             }
             let decoder = JSONDecoder()
-            let downloadedBusinessData = try! decoder.decode(BusinessResponseModel.self, from: data)
-            completionHandler(downloadedBusinessData, nil)
+            do {
+                let downloadedBusinessData = try decoder.decode(BusinessResponseModel.self, from: data)
+                completionHandler(downloadedBusinessData, nil)
+            } catch {
+                completionHandler(nil, error)
+            }
         })
         task.resume()
     }
