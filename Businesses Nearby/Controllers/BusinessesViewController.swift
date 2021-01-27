@@ -38,6 +38,8 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             fatalError()
         }
         
+        cell.activityIndicator.isHidden = false
+        cell.activityIndicator.startAnimating()
         cell.imageOfBusiness.downloaded(from: businesses[indexPath.row].imageURL) { (image) in
             if image != nil {
                 DispatchQueue.main.async {

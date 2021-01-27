@@ -14,7 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var imageOfBusiness: UIImageView!
-    let activityIndicator = UIActivityIndicatorView()
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +24,11 @@ class TableViewCell: UITableViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "TableViewCell",
                      bundle: nil)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageOfBusiness.image = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
