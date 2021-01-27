@@ -14,6 +14,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     let activityIndicator = UIActivityIndicatorView(style: .medium)
     var businesses: [Business] = []
+    var selectedBusiness: Business?
     var locationManager: CLLocationManager?
     
     override func viewDidLoad() {
@@ -62,7 +63,15 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedBusiness = businesses[indexPath.row]
         performSegue(withIdentifier: "showInfoViewController", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? InfoViewController {
+            vc.business = selectedBusiness
+            selectedBusiness = nil
+        }
     }
     
     //MARK: - Location Manager and request info
@@ -98,25 +107,3 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 }
 
-    //MARK: - Extension for UIImageView to process the link in JSON
-
-extension UIImageView {
-    
-    func downloaded(from url: URL, completion: ((UIImage?) -> Void)? = nil) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else {
-                completion?(nil)
-                return
-            }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-                completion?(image)
-            }
-        }.resume()
-    }
-}
