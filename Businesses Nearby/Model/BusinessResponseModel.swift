@@ -13,7 +13,6 @@ struct BusinessResponseModel: Codable {
 
 struct Business: Codable {
     let rating: Double
-    let price: String
     let phone: String
     let isClosed: Bool
     let categories: [Category]
@@ -24,7 +23,6 @@ struct Business: Codable {
     
     enum CodingKeys: String, CodingKey {
         case rating
-        case price
         case phone
         case categories
         case reviewCount = "review_count"

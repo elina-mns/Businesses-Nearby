@@ -17,6 +17,8 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var isItOpenLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var ratingName: UILabel!
+    @IBOutlet weak var reviewCountName: UILabel!
     
     
     var business: Business?
@@ -28,16 +30,18 @@ class InfoViewController: UIViewController {
         imageView.layer.borderWidth = 2
         
         guard let business = business else { return }
-        locationLabel.text = "\(business.location.city) \(business.location.country) \(business.location.address1) \(business.location.address2 ?? "") \(business.location.address3 ?? "")"
-        phoneLabel.text = business.phone
-        ratingLabel.text = String(business.rating)
-        reviewCountLabel.text = String(business.reviewCount)
+        locationLabel.text = " 🏃‍♀️ \(business.location.city) \(business.location.country) \(business.location.address1) \(business.location.address2 ?? "") \(business.location.address3 ?? "")"
+        phoneLabel.text = "📲 " + business.phone
+        ratingLabel.text = "⭐️ " + String(business.rating)
+        reviewCountLabel.text = " 🧑‍💻" + String(business.reviewCount)
         if !business.isClosed {
-            isItOpenLabel.text = "Yes"
+            isItOpenLabel.text = "🙂 Yes"
         } else {
-            isItOpenLabel.text = "Closed"
+            isItOpenLabel.text = "😒 Closed"
         }
         questionLabel.text = "Is it open?"
+        ratingName.text = "Rating:"
+        reviewCountName.text = "Review Count:"
     }
     
     func setImage() {

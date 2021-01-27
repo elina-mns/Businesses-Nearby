@@ -7,70 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D68BA636-D340-4CC2-A435-595071BF47A5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "requestBusinessInfo()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D68BA636-D340-4CC2-A435-595071BF47A5 - bb277eb590c53b8d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Businesses_Nearby.BusinessesViewController.requestBusinessInfo() -&gt; ()"
-                  moduleName = "Businesses Nearby"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
-                  offsetFromSymbolStart = "797">
-               </Location>
-               <Location
-                  uuid = "D68BA636-D340-4CC2-A435-595071BF47A5 - d4808dc9609302be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Businesses_Nearby.BusinessResponseModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Businesses_Nearby.BusinessesViewController.requestBusinessInfo() -&gt; ()"
-                  moduleName = "Businesses Nearby"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "232">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "73FB0408-1158-434A-A9B9-B3D9EE026741"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "checkAndRequestInfo()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "28D9F035-68CD-446E-87EE-532307178A49"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -80,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "requestBusinessInfo(location:completionHandler:)"
+            landmarkName = "requestBusinessInfo(location:category:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,8 +30,8 @@
             filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
             <Locations>
@@ -128,6 +64,70 @@
                   startingLineNumber = "42"
                   endingLineNumber = "42"
                   offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9128FA3B-607E-4358-AEFD-025995F0A1AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "requestBusinessInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04A49A27-6CA9-4727-8939-895762BF0C12"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Businesses Nearby/Model/BusinessAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "stringValue"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "04A49A27-6CA9-4727-8939-895762BF0C12 - 6ba4c51129fd0639"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Businesses_Nearby.BusinessAPI.EndPoints.stringValue.getter : Swift.String"
+                  moduleName = "Businesses Nearby"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Model/BusinessAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "04A49A27-6CA9-4727-8939-895762BF0C12 - 6ba4c51129fd0639"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Businesses_Nearby.BusinessAPI.EndPoints.stringValue.getter : Swift.String"
+                  moduleName = "Businesses Nearby"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Model/BusinessAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "920">
                </Location>
             </Locations>
          </BreakpointContent>

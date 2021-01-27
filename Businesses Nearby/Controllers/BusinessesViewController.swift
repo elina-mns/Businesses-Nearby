@@ -16,6 +16,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     var businesses: [Business] = []
     var selectedBusiness: Business?
     var locationManager: CLLocationManager?
+    var category: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,19 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
-        checkAndRequestInfo()
+        //requestBusinessInfo()
+        if let indexOfController = tabBarController?.viewControllers?.firstIndex(of: self) {
+            switch indexOfController {
+            case 0:
+                category = Category(alias: "restaurants", title: "Restaurants")
+                title = "Restaurants"
+            case 1:
+                category = Category(alias: "groceries", title: "Groceries")
+                title = "Groceries"
+            default:
+                break
+            }
+        }
     }
     
     //MARK: - Table View Methods
@@ -77,23 +90,15 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - Location Manager and request info
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkAndRequestInfo()
-    }
-    
-    private func checkAndRequestInfo() {
-        if locationManager?.authorizationStatus == .authorizedWhenInUse,
-           CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self),
-           CLLocationManager.isRangingAvailable() {
-            requestBusinessInfo()
-        } else {
-            locationManager?.requestWhenInUseAuthorization()
-        }
+        requestBusinessInfo()
     }
         
     func requestBusinessInfo() {
-        let userLocation = UserLocation(latitude: locationManager?.location?.coordinate.latitude ?? 0,
-                                        longitude: locationManager?.location?.coordinate.longitude ?? 0)
-        BusinessAPI.requestBusinessInfo(location: userLocation) { (response, error) in
+        // Default NYC
+        let userLocation = UserLocation(latitude: locationManager?.location?.coordinate.latitude,
+                                        longitude: locationManager?.location?.coordinate.longitude)
+        
+        BusinessAPI.requestBusinessInfo(location: userLocation, category: category) { (response, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else if let responseExpected = response {
