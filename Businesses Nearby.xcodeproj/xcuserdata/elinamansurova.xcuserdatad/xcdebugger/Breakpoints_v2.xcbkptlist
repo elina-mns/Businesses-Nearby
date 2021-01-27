@@ -14,8 +14,8 @@
             filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "requestBusinessInfo()"
             landmarkType = "7">
             <Locations>
@@ -62,8 +62,8 @@
             filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "checkAndRequestInfo()"
             landmarkType = "7">
          </BreakpointContent>
@@ -82,6 +82,54 @@
             endingLineNumber = "41"
             landmarkName = "requestBusinessInfo(location:completionHandler:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46083AA9-7BCC-4D29-B6B5-52B47F1BD99B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "46083AA9-7BCC-4D29-B6B5-52B47F1BD99B - 9ddb907b93978302"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Businesses_Nearby.BusinessesViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Businesses Nearby"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+               <Location
+                  uuid = "46083AA9-7BCC-4D29-B6B5-52B47F1BD99B - 6dfced8c89c1e45c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in Businesses_Nearby.BusinessesViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Businesses Nearby"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

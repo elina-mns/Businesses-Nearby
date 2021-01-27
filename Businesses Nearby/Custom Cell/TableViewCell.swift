@@ -14,6 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var imageOfBusiness: UIImageView!
+    let activityIndicator = UIActivityIndicatorView()
     
     override func awakeFromNib() {
         super.awakeFromNib()

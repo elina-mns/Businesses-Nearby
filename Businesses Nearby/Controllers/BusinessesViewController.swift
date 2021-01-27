@@ -37,6 +37,25 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else {
             fatalError()
         }
+        
+        cell.imageOfBusiness.downloaded(from: businesses[indexPath.row].imageURL) { (image) in
+            if image != nil {
+                DispatchQueue.main.async {
+                    cell.imageOfBusiness.image = image
+                    cell.activityIndicator.stopAnimating()
+                }
+            } else {
+                DispatchQueue.main.async {
+                    cell.imageOfBusiness.image = UIImage(named: "error")
+                    cell.activityIndicator.stopAnimating()
+                }
+            }
+        }
+        cell.name.text = businesses[indexPath.row].name
+        cell.rating.text = String(businesses[indexPath.row].rating)
+        let location = businesses[indexPath.row].location
+        cell.location.text = "\(location.city) \(location.country) \(location.address1) \(location.address2 ?? "") \(location.address3 ?? "")"
+        cell.phone.text = businesses[indexPath.row].phone
         return cell
     }
     

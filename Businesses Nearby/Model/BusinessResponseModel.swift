@@ -19,7 +19,8 @@ struct Business: Codable {
     let categories: [Category]
     let reviewCount: Int
     let name: String
-    let imageURL: String
+    let imageURL: URL
+    let location: Location
     
     enum CodingKeys: String, CodingKey {
         case rating
@@ -30,10 +31,19 @@ struct Business: Codable {
         case isClosed = "is_closed"
         case name
         case imageURL = "image_url"
+        case location
     }
 }
 
 struct Category: Codable {
     let alias: String
     let title: String
+}
+
+struct Location: Codable {
+    let city: String
+    let country: String
+    let address1: String
+    let address2: String?
+    let address3: String?
 }
