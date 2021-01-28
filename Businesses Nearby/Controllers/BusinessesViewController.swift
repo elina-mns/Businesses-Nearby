@@ -57,7 +57,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else {
-            fatalError()
+            fatalError("Couldn't configure the cell this time. Table View Cell should be registered.")
         }
         
         cell.activityIndicator.isHidden = false

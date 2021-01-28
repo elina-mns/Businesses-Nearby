@@ -28,6 +28,7 @@ class BusinessAPI {
     
     class func requestBusinessInfo(location: UserLocation, category: Category, completionHandler: @escaping (BusinessResponseModel?, Error?) -> Void) {
         var request = URLRequest(url: EndPoints.businessInfo(location: location, category: category).url)
+        //Here there should be an authorization header for our request
         request.setValue("Bearer \(BusinessAPI.apiKey)", forHTTPHeaderField: "Authorization")
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
