@@ -26,14 +26,16 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
-        //requestBusinessInfo()
-        if let indexOfController = tabBarController?.viewControllers?.firstIndex(of: self) {
+        
+        // Add nav controller and tab bar controller and use its' index to set title and specify the request
+        if let navigationController = navigationController,
+           let indexOfController = navigationController.tabBarController?.viewControllers?.firstIndex(of: navigationController) {
             switch indexOfController {
             case 0:
                 category = Category(alias: "restaurants", title: "Restaurants")
                 title = "Restaurants"
             case 1:
-                category = Category(alias: "groceries", title: "Groceries")
+                category = Category(alias: "grocery", title: "Groceries")
                 title = "Groceries"
             default:
                 break
@@ -94,7 +96,6 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
         
     func requestBusinessInfo() {
-        // Default NYC
         let userLocation = UserLocation(latitude: locationManager?.location?.coordinate.latitude,
                                         longitude: locationManager?.location?.coordinate.longitude)
         

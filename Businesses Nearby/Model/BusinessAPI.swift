@@ -16,6 +16,8 @@ class BusinessAPI {
         var url: URL {
             return URL(string: self.stringValue)!
         }
+        
+        //Default coordinates were set to Manhattan 
         var stringValue: String {
             switch self {
             case let .businessInfo(location, category):

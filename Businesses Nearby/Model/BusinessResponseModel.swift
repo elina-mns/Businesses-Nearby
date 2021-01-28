@@ -18,6 +18,7 @@ struct Business: Codable {
     let categories: [Category]
     let reviewCount: Int
     let name: String
+    let url: URL
     let imageURL: URL
     let location: Location
     
@@ -28,6 +29,7 @@ struct Business: Codable {
         case reviewCount = "review_count"
         case isClosed = "is_closed"
         case name
+        case url
         case imageURL = "image_url"
         case location
     }

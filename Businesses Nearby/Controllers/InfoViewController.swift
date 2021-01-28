@@ -19,6 +19,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var ratingName: UILabel!
     @IBOutlet weak var reviewCountName: UILabel!
+    @IBOutlet weak var makeReservation: UIButton!
     
     
     var business: Business?
@@ -42,6 +43,7 @@ class InfoViewController: UIViewController {
         questionLabel.text = "Is it open?"
         ratingName.text = "Rating:"
         reviewCountName.text = "Review Count:"
+        
     }
     
     func setImage() {
@@ -62,6 +64,7 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func makeReservationIsTapped(_ sender: UIButton) {
+        //show URL from the response
         
     }
     
