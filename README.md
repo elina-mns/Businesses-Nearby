@@ -1,5 +1,5 @@
 <img src="https://github.com/elina-mns/Businesses-Nearby/blob/main/Businesses%20Nearby/Assets.xcassets/AppIcon.appiconset/120.png"
-width=160, height=140
+width=120, height=100
 align="right"/>
 # Businesses-Nearby
 
