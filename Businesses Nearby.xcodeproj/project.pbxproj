@@ -100,9 +100,8 @@
 				315B25E025C0AAAC00A60F42 /* Custom Cell */,
 				313D90C225C0A96400A605FE /* Model */,
 				316C495725C09C570084974E /* Controllers */,
-				316C494825C099FF0084974E /* Main.storyboard */,
+				3173C14C25C3761000861EBC /* Views */,
 				316C494B25C09A010084974E /* Assets.xcassets */,
-				316C494D25C09A010084974E /* LaunchScreen.storyboard */,
 				316C495025C09A010084974E /* Info.plist */,
 			);
 			path = "Businesses Nearby";
@@ -119,6 +118,15 @@
 				3107824D25C3547A00D0CD02 /* LoadingViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3173C14C25C3761000861EBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				316C494825C099FF0084974E /* Main.storyboard */,
+				316C494D25C09A010084974E /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

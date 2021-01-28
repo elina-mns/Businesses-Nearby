@@ -7,6 +7,8 @@
 
 import UIKit
 
+//MARK: - Loading View with blur background before first view appears
+
 class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {

@@ -7,6 +7,8 @@
 
 import UIKit
 
+//MARK: - Extension to show a pop-up alert
+
 extension UIViewController {
     func showAlert(title: String, message: String, okAction: (() -> Void)?) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)

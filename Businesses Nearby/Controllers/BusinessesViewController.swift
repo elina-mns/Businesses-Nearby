@@ -68,7 +68,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.activityIndicator.isHidden = false
         cell.activityIndicator.startAnimating()
         
-        //extracting image from URL using extension
+        //Extracting image from URL using extension "Image View Extension"
         cell.imageOfBusiness.downloaded(from: businesses[indexPath.row].imageURL) { (image) in
             if image != nil {
                 DispatchQueue.main.async {
