@@ -18,6 +18,7 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        activityIndicator.color = .blue
     }
     
     static let identifier = "TableViewCell"

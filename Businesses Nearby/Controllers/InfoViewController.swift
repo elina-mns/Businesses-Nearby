@@ -27,7 +27,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setImage()
-        imageView.layer.cornerRadius = imageView.bounds.width / 3
+        imageView.layer.cornerRadius = imageView.frame.width / 3
         imageView.layer.borderWidth = 2
         
         guard let business = business else { return }
@@ -44,6 +44,8 @@ class InfoViewController: UIViewController {
         ratingName.text = "Rating:"
         reviewCountName.text = "Review Count:"
         makeReservation.isHidden = !isReservationAvailable
+        makeReservation.layer.cornerRadius = (makeReservation.frame.width / 10) - 6
+        makeReservation.layer.borderWidth = 2
     }
     
     func setImage() {

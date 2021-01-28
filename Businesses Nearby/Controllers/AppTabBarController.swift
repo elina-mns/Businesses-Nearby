@@ -21,7 +21,5 @@ class AppTabBarController: UITabBarController {
             let attributes = [NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 14)]
             appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
         })
-        navigationController?.navigationBar.barTintColor = .purple
     }
-
 }
