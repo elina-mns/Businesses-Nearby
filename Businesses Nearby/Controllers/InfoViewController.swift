@@ -21,7 +21,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var reviewCountName: UILabel!
     @IBOutlet weak var makeReservation: UIButton!
     
-    
+    var isReservationAvailable = false
     var business: Business?
     
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ class InfoViewController: UIViewController {
         questionLabel.text = "Is it open?"
         ratingName.text = "Rating:"
         reviewCountName.text = "Review Count:"
-        
+        makeReservation.isHidden = !isReservationAvailable
     }
     
     func setImage() {
@@ -56,6 +56,7 @@ class InfoViewController: UIViewController {
                 }
             } else {
                 DispatchQueue.main.async {
+                    self.showAlert(title: "Error", message: "Couldn't upload an image this time.", okAction: nil)
                     self.imageView.image = UIImage(named: "error")
                     self.activityIndicator.stopAnimating()
                 }
@@ -64,8 +65,8 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func makeReservationIsTapped(_ sender: UIButton) {
-        //show URL from the response
-        
+        guard let business = business else { return }
+        UIApplication.shared.open(business.url)
     }
     
     
