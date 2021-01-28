@@ -20,6 +20,10 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let loadingVC = LoadingViewController()
+        loadingVC.modalPresentationStyle = .overCurrentContext
+        loadingVC.modalTransitionStyle = .crossDissolve
+        present(loadingVC, animated: true, completion: nil)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
@@ -27,6 +31,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
         setBottomButtonsAndTitles()
+        loadingVC.dismiss(animated: true, completion: nil)
     }
     
     //MARK: Add nav controller, tab bar controller and use its' index to set title and specify the request

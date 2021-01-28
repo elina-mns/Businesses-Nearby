@@ -17,11 +17,11 @@ class BusinessAPI {
             return URL(string: self.stringValue)!
         }
         
-        //Default coordinates were set to Manhattan 
+        //Default coordinates were set to Paris
         var stringValue: String {
             switch self {
             case let .businessInfo(location, category):
-                return "https://api.yelp.com/v3/businesses/search?categories=\(category.alias)&latitude=\(location.latitude ?? 40.7831)&longitude=\(location.longitude ?? 74.0060)"
+                return "https://api.yelp.com/v3/businesses/search?categories=\(category.alias)&latitude=\(location.latitude ?? 48.8566)&longitude=\(location.longitude ?? 2.3522)"
             }
         }
     }

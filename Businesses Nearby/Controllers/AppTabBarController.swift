@@ -14,16 +14,14 @@ class AppTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tabBar.items?.enumerated().forEach({ (index, item) in
             item.title = items[index].title
             item.image = items[index].image
             let appearance = UITabBarItem.appearance()
             let attributes = [NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 14)]
             appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
-            
-    
         })
+        navigationController?.navigationBar.barTintColor = .purple
     }
 
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3107824A25C3253300D0CD02 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107824925C3253300D0CD02 /* AlertExtension.swift */; };
+		3107824E25C3547A00D0CD02 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107824D25C3547A00D0CD02 /* LoadingViewController.swift */; };
 		313D90B825C09DFD00A605FE /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313D90B725C09DFD00A605FE /* BusinessesViewController.swift */; };
 		313D90BB25C09E3C00A605FE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313D90BA25C09E3C00A605FE /* InfoViewController.swift */; };
 		315B25D825C0A9A200A60F42 /* BusinessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315B25D725C0A9A200A60F42 /* BusinessResponseModel.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		3107824925C3253300D0CD02 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		3107824D25C3547A00D0CD02 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		313D90B725C09DFD00A605FE /* BusinessesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
 		313D90BA25C09E3C00A605FE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		315B25D725C0A9A200A60F42 /* BusinessResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessResponseModel.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				3188B74825C1EA3B00301A01 /* ImageViewExtension.swift */,
 				3107824925C3253300D0CD02 /* AlertExtension.swift */,
 				3188B74C25C218A000301A01 /* AppTabBarController.swift */,
+				3107824D25C3547A00D0CD02 /* LoadingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				313D90B825C09DFD00A605FE /* BusinessesViewController.swift in Sources */,
 				3188B74D25C218A000301A01 /* AppTabBarController.swift in Sources */,
 				315B25E325C0AAD000A60F42 /* TableViewCell.swift in Sources */,
+				3107824E25C3547A00D0CD02 /* LoadingViewController.swift in Sources */,
 				3107824A25C3253300D0CD02 /* AlertExtension.swift in Sources */,
 				3188B74925C1EA3B00301A01 /* ImageViewExtension.swift in Sources */,
 				316C494525C099FF0084974E /* SceneDelegate.swift in Sources */,

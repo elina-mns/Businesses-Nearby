@@ -30,13 +30,13 @@
             filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "46083AA9-7BCC-4D29-B6B5-52B47F1BD99B - 9ddb907b93978302"
+                  uuid = "46083AA9-7BCC-4D29-B6B5-52B47F1BD99B - 9ddb907b9397bf03"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -46,12 +46,12 @@
                   urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "1016">
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "1207">
                </Location>
                <Location
-                  uuid = "46083AA9-7BCC-4D29-B6B5-52B47F1BD99B - 6dfced8c89c1e45c"
+                  uuid = "46083AA9-7BCC-4D29-B6B5-52B47F1BD99B - 6dfced8c89c1d85b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -61,9 +61,9 @@
                   urlString = "file:///Users/elinamansurova/Desktop/Projects/Businesses%20Nearby/Businesses%20Nearby/Controllers/BusinessesViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "248">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "209">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Businesses Nearby/Controllers/BusinessesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "requestBusinessInfo()"
             landmarkType = "7">
          </BreakpointContent>
