@@ -13,3 +13,12 @@ The app uses the Yelp API to get nearby Restaurants and Grocery Stores to the us
 * Usage of Yelp's public API and authorization header to request
 * Set the UI, creating alerts when errors occurs
 * Set a loading view 
+
+
+<img src="https://github.com/elina-mns/Businesses-Nearby/blob/main/Businesses%20Nearby/Assets.xcassets/images%20for%20readMe/1.png"
+width=300, height=600,
+align="left"/>
+
+<img src="https://github.com/elina-mns/Businesses-Nearby/blob/main/Businesses%20Nearby/Assets.xcassets/images%20for%20readMe/2.png"
+width=300, height=600,
+align="center"/>
