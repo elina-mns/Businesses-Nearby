@@ -16,33 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paella" translatesAutoresizingMaskIntoConstraints="NO" id="Yqp-Bz-9Pq">
-                                <rect key="frame" x="185" y="401" width="132" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forkspoon" translatesAutoresizingMaskIntoConstraints="NO" id="rlS-HN-IG4">
-                                <rect key="frame" x="91" y="358" width="110" height="154"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="154" id="tbX-h9-kTY"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants &amp; Groceries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0D-QY-3Db">
-                                <rect key="frame" x="91" y="291" width="249.5" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants &amp; Groceries" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0D-QY-3Db">
+                                <rect key="frame" x="82.5" y="291" width="249.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-yT-vGt">
+                                <rect key="frame" x="119" y="376" width="176" height="154"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forkspoon" translatesAutoresizingMaskIntoConstraints="NO" id="rlS-HN-IG4">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="154"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="154" id="tbX-h9-kTY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paella" translatesAutoresizingMaskIntoConstraints="NO" id="Yqp-Bz-9Pq">
+                                        <rect key="frame" x="96" y="37" width="80" height="80"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="f0D-QY-3Db" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="BJR-Wb-b2A"/>
                             <constraint firstItem="f0D-QY-3Db" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="247" id="ICP-ri-xVG"/>
-                            <constraint firstItem="rlS-HN-IG4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="Mwf-U2-ohi"/>
+                            <constraint firstItem="f0D-QY-3Db" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PD3-j7-wZM"/>
+                            <constraint firstItem="fIN-yT-vGt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="X2s-hJ-h6s"/>
+                            <constraint firstItem="fIN-yT-vGt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aif-4L-FdX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f0D-QY-3Db" secondAttribute="trailing" constant="8" id="aui-5l-O14"/>
-                            <constraint firstItem="rlS-HN-IG4" firstAttribute="leading" secondItem="f0D-QY-3Db" secondAttribute="leading" id="ba2-6V-G9U"/>
-                            <constraint firstItem="rlS-HN-IG4" firstAttribute="top" secondItem="f0D-QY-3Db" secondAttribute="bottom" constant="40" id="c9P-BM-Eg8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rlS-HN-IG4" secondAttribute="trailing" constant="213" id="xxc-zb-q4Y"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -9,6 +9,11 @@ import Foundation
 
 class BusinessAPI {
     
+    private struct DefaultParisCoordinates {
+        static let latitude = 48.8566
+        static let longitude = 2.3522
+    }
+    
     static let apiKey = "anNGTLhlmtoLfR5moDqC6Esv8EAHW4WvBFyFPjMB1qNAk9aixJjYYNNbs2nN8QN5K6SPXVcD5vmQeaiQxqeuJwfBCXCvCvlA6tDlqjD2BkPTkYujI1bg4uDg8X4QYHYx"
     
     enum EndPoints {
@@ -17,11 +22,10 @@ class BusinessAPI {
             return URL(string: self.stringValue)!
         }
         
-        //Default coordinates were set to Paris
         var stringValue: String {
             switch self {
             case let .businessInfo(location, category):
-                return "https://api.yelp.com/v3/businesses/search?categories=\(category.alias)&latitude=\(location.latitude ?? 48.8566)&longitude=\(location.longitude ?? 2.3522)"
+                return "https://api.yelp.com/v3/businesses/search?categories=\(category.alias)&latitude=\(location.latitude ?? DefaultParisCoordinates.latitude)&longitude=\(location.longitude ?? DefaultParisCoordinates.longitude)"
             }
         }
     }

@@ -95,6 +95,7 @@
 		316C494125C099FF0084974E /* Businesses Nearby */ = {
 			isa = PBXGroup;
 			children = (
+				31754E1425C3AEBF0022E15A /* Extensions */,
 				316C494225C099FF0084974E /* AppDelegate.swift */,
 				316C494425C099FF0084974E /* SceneDelegate.swift */,
 				315B25E025C0AAAC00A60F42 /* Custom Cell */,
@@ -112,8 +113,6 @@
 			children = (
 				313D90B725C09DFD00A605FE /* BusinessesViewController.swift */,
 				313D90BA25C09E3C00A605FE /* InfoViewController.swift */,
-				3188B74825C1EA3B00301A01 /* ImageViewExtension.swift */,
-				3107824925C3253300D0CD02 /* AlertExtension.swift */,
 				3188B74C25C218A000301A01 /* AppTabBarController.swift */,
 				3107824D25C3547A00D0CD02 /* LoadingViewController.swift */,
 			);
@@ -127,6 +126,15 @@
 				316C494D25C09A010084974E /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		31754E1425C3AEBF0022E15A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3188B74825C1EA3B00301A01 /* ImageViewExtension.swift */,
+				3107824925C3253300D0CD02 /* AlertExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

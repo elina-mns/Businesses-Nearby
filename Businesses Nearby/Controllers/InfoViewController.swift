@@ -27,7 +27,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setImage()
-        imageView.layer.cornerRadius = imageView.frame.width / 3
+        imageView.layer.cornerRadius = 20
         imageView.layer.borderWidth = 2
         
         guard let business = business else { return }
@@ -48,20 +48,20 @@ class InfoViewController: UIViewController {
         makeReservation.layer.borderWidth = 2
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
     func setImage() {
         guard let business = business else { return }
         imageView.downloaded(from: business.imageURL) { (image) in
             if image != nil {
-                DispatchQueue.main.async {
-                    self.imageView.image = image
-                    self.activityIndicator.stopAnimating()
-                }
+                self.imageView.image = image
+                self.activityIndicator.stopAnimating()
             } else {
-                DispatchQueue.main.async {
-                    self.showAlert(title: "Error", message: "Couldn't upload an image this time.", okAction: nil)
-                    self.imageView.image = UIImage(named: "error")
-                    self.activityIndicator.stopAnimating()
-                }
+                self.showAlert(title: "Error", message: "Couldn't upload an image this time.", okAction: nil)
+                self.imageView.image = UIImage(named: "error")
+                self.activityIndicator.stopAnimating()
             }
         }
     }

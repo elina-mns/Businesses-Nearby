@@ -17,13 +17,22 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     var selectedBusiness: Business?
     var locationManager: CLLocationManager?
     var category: Category!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    lazy var loadingVC: LoadingViewController = {
         let loadingVC = LoadingViewController()
         loadingVC.modalPresentationStyle = .overCurrentContext
         loadingVC.modalTransitionStyle = .crossDissolve
-        present(loadingVC, animated: true, completion: nil)
+        return loadingVC
+    }()
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(requestBusinessInfo), for: .valueChanged)
+        return refreshControl
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.addSubview(refreshControl)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
@@ -31,7 +40,6 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
         setBottomButtonsAndTitles()
-        loadingVC.dismiss(animated: true, completion: nil)
     }
     
     //MARK: Add nav controller, tab bar controller and use its' index to set title and specify the request
@@ -64,30 +72,24 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell else {
             fatalError("Couldn't configure the cell this time. Table View Cell should be registered.")
         }
-        
+        let business = businesses[indexPath.row]
         cell.activityIndicator.isHidden = false
         cell.activityIndicator.startAnimating()
-        
         //Extracting image from URL using extension "Image View Extension"
-        cell.imageOfBusiness.downloaded(from: businesses[indexPath.row].imageURL) { (image) in
+        cell.imageOfBusiness.downloaded(from: business.imageURL) { (image) in
             if image != nil {
-                DispatchQueue.main.async {
-                    cell.imageOfBusiness.image = image
-                    cell.activityIndicator.stopAnimating()
-                }
+                cell.imageOfBusiness.image = image
+                cell.activityIndicator.stopAnimating()
             } else {
-                DispatchQueue.main.async {
-                    self.showAlert(title: "Error", message: "Couldn't upload an image this time (maybe poor connection)", okAction: nil)
-                    cell.imageOfBusiness.image = UIImage(named: "error")
-                    cell.activityIndicator.stopAnimating()
-                }
+                cell.imageOfBusiness.image = UIImage(named: "error")
+                cell.activityIndicator.stopAnimating()
             }
         }
-        cell.name.text = businesses[indexPath.row].name
-        cell.rating.text = String(businesses[indexPath.row].rating) + " ⭐️"
-        let location = businesses[indexPath.row].location
+        cell.name.text = business.name
+        cell.rating.text = String(business.rating) + " ⭐️"
+        let location = business.location
         cell.location.text = "\(location.city) \(location.country) \(location.address1) \(location.address2 ?? "") \(location.address3 ?? "")"
-        cell.phone.text = businesses[indexPath.row].phone
+        cell.phone.text = business.phone
         return cell
     }
     
@@ -103,8 +105,6 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             vc.business = selectedBusiness
             vc.isReservationAvailable = category.alias == "restaurants"
             selectedBusiness = nil
-        } else {
-            self.showAlert(title: "Error", message: "Couldn't upload further info this time (maybe poor connection)", okAction: nil)
         }
     }
     
@@ -114,18 +114,24 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         requestBusinessInfo()
     }
         
+    @objc
     func requestBusinessInfo() {
         let userLocation = UserLocation(latitude: locationManager?.location?.coordinate.latitude,
                                         longitude: locationManager?.location?.coordinate.longitude)
-        
-        BusinessAPI.requestBusinessInfo(location: userLocation, category: category) { (response, error) in
-            if let error = error {
-                self.showAlert(title: "Error", message: "Couldn't perform the request this time (maybe poor connection)", okAction: nil)
-            } else if let responseExpected = response {
-                self.businesses = responseExpected.businesses
+        /*   Presenting should go first and after it is done we perform an async request
+         This way Loading View Controller knows about the request  */
+        present(loadingVC, animated: true) {
+            BusinessAPI.requestBusinessInfo(location: userLocation, category: self.category) { (response, error) in
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.activityIndicator.stopAnimating()
+                    if error != nil {
+                        self.showAlert(title: "Error", message: "Couldn't perform the request this time (maybe poor connection)", okAction: nil)
+                    } else if let responseExpected = response {
+                        self.businesses = responseExpected.businesses
+                        self.tableView.reloadData()
+                        self.activityIndicator.stopAnimating()
+                    }
+                    self.refreshControl.endRefreshing()
+                    self.loadingVC.dismiss(animated: true, completion: nil)
                 }
             }
         }

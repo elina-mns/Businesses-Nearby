@@ -36,5 +36,4 @@ class LoadingViewController: UIViewController {
         blurEffectView.alpha = 0.8
         return blurEffectView
     }()
-    
 }
