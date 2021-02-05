@@ -32,6 +32,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBottomButtonsAndTitles()
         tableView.addSubview(refreshControl)
         tableView.delegate = self
         tableView.dataSource = self
@@ -39,7 +40,6 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
-        setBottomButtonsAndTitles()
     }
     
     //MARK: Add nav controller, tab bar controller and use its' index to set title and specify the request
