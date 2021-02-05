@@ -48,12 +48,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="s7z-7T-YYE">
-                                <rect key="frame" x="201.5" y="246.5" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="s7z-7T-YYE">
+                                <rect key="frame" x="196" y="255" width="21" height="24"/>
                                 <color key="color" systemColor="systemIndigoColor"/>
                             </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="exP-RZ-rRO">
-                                <rect key="frame" x="20" y="88" width="374" height="335.5"/>
+                                <rect key="frame" x="20" y="110" width="374" height="313.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="JLJ-VF-cG9">
                                 <rect key="frame" x="128.5" y="448.5" width="157" height="315.5"/>
@@ -133,7 +133,7 @@
                         <viewLayoutGuide key="safeArea" id="wW9-cc-ErI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="s7z-7T-YYE" firstAttribute="centerY" secondItem="exP-RZ-rRO" secondAttribute="centerY" constant="0.75" id="0nC-Rg-uk4"/>
+                            <constraint firstItem="s7z-7T-YYE" firstAttribute="centerY" secondItem="exP-RZ-rRO" secondAttribute="centerY" constant="0.25" id="0nC-Rg-uk4"/>
                             <constraint firstItem="JLJ-VF-cG9" firstAttribute="top" secondItem="exP-RZ-rRO" secondAttribute="bottom" constant="25" id="3Dd-Dv-qxk"/>
                             <constraint firstItem="exP-RZ-rRO" firstAttribute="leading" secondItem="wW9-cc-ErI" secondAttribute="leading" constant="20" id="Bci-ph-rhN"/>
                             <constraint firstItem="0Pi-OE-fua" firstAttribute="top" secondItem="exP-RZ-rRO" secondAttribute="bottom" constant="136.5" id="G9w-E4-fve"/>
@@ -141,9 +141,9 @@
                             <constraint firstItem="0Pi-OE-fua" firstAttribute="leading" secondItem="wW9-cc-ErI" secondAttribute="leading" constant="37" id="RPJ-gA-SYz"/>
                             <constraint firstItem="JLJ-VF-cG9" firstAttribute="centerX" secondItem="wW9-cc-ErI" secondAttribute="centerX" id="eXT-EX-5hM"/>
                             <constraint firstItem="wW9-cc-ErI" firstAttribute="trailing" secondItem="exP-RZ-rRO" secondAttribute="trailing" constant="20" id="hcs-J2-dpc"/>
-                            <constraint firstItem="exP-RZ-rRO" firstAttribute="top" secondItem="wW9-cc-ErI" secondAttribute="top" id="kYB-P9-v5w"/>
+                            <constraint firstItem="exP-RZ-rRO" firstAttribute="top" secondItem="wW9-cc-ErI" secondAttribute="top" constant="22" id="kYB-P9-v5w"/>
                             <constraint firstItem="wW9-cc-ErI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JLJ-VF-cG9" secondAttribute="trailing" constant="8" id="mt7-Fu-KRs"/>
-                            <constraint firstItem="s7z-7T-YYE" firstAttribute="centerX" secondItem="exP-RZ-rRO" secondAttribute="centerX" constant="4.5" id="mwS-VN-49x"/>
+                            <constraint firstItem="s7z-7T-YYE" firstAttribute="centerX" secondItem="exP-RZ-rRO" secondAttribute="centerX" constant="-0.5" id="mwS-VN-49x"/>
                             <constraint firstItem="wW9-cc-ErI" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JLJ-VF-cG9" secondAttribute="bottom" constant="8" id="pHE-Fv-Udd"/>
                         </constraints>
                     </view>

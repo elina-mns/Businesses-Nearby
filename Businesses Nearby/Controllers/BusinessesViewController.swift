@@ -121,6 +121,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         /*   Presenting should go first and after it is done we perform an async request
          This way Loading View Controller knows about the request  */
         present(loadingVC, animated: true) {
+            guard self.category != nil else { return }
             BusinessAPI.requestBusinessInfo(location: userLocation, category: self.category) { (response, error) in
                 DispatchQueue.main.async {
                     if error != nil {
